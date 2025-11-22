@@ -9,6 +9,9 @@
     <title>Animal Photography</title>
     <!--Favorite Icon-->
     <link rel="shortcut icon" href="./assets/images/logo.jpg" type="image/x-icon">
+    <!--Font-->
+    <link href="https://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
+
     <!--css Link-->
     <link rel="stylesheet" href="./style.css">
     <!-- Font Awsome CND Link -->
@@ -19,10 +22,15 @@
 
 <body>
     <header>
+        <button class="menu-btn" id="menuBtn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
         <!-- Sidebar Navigation -->
-        <nav class="sidebar">
+        <nav class="sideBar">
             <div class="sideBarContainer">
                 <div class="sideBarBody ">
+
                     <div class="sideBarBlockone">
                         <div class="sideBarBoxone">
                             <h1><i class="fa-solid fa-camera"></i> Wild Lens</h1>
@@ -331,7 +339,23 @@
                 this.classList.add('active');
             });
         });
+        // Sidebar toggle functionality
+        const menuBtn = document.getElementById('menuBtn');
+        const sidebar = document.querySelector('.sideBar');
+
+        menuBtn.addEventListener('click', function () {
+            sidebar.classList.toggle('active');
+        });
+
+        // Optional: Close sidebar when clicking outside
+        document.addEventListener('click', function (e) {
+            if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
     </script>
+
+
 </body>
 
 </html>

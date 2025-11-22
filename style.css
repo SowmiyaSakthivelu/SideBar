@@ -91,17 +91,41 @@ a {
 }
 
 /* Sidebar Styles */
-.sidebar {
+/* Menu Button */
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background: var(--bgColor);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background 0.3s;
+}
+
+.menu-btn:hover {
+    background:var(--primaryColor);
+}
+.sideBar {
     position: fixed;
     left: 0;
     top: 0;
     width: 260px;
     height: 100vh;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 30px 5px;
+    padding: 30px 0;
     z-index: 1000;
     box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    transform:translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+.sideBar.active{
+    transform: translateX(0);
 }
 
 .sideBarBody {
@@ -386,7 +410,7 @@ a {
 }
 
 @media (max-width: 768px) {
-    .sidebar {
+    .sideBar {
         width: 80px;
     }
 
