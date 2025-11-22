@@ -8,10 +8,10 @@
     --primaryColor: #000000;
     --secondaryColor: #666;
     --lightColor: #ffffff;
-    --tertiaryColor:rgba(255, 255, 255, 0.8);
-    --bgColor:#667eea;
+    --tertiaryColor: rgba(255, 255, 255, 0.8);
+    --bgColor: #667eea;
     --ffPrimary: 'Segoe UI', sans-serif;
-    --ffSecondary:"Lato", sans-serif;
+    --ffSecondary: "Lato", sans-serif;
 }
 
 html {
@@ -108,8 +108,9 @@ a {
 }
 
 .menu-btn:hover {
-    background:var(--primaryColor);
+    background: var(--primaryColor);
 }
+
 .sideBar {
     position: fixed;
     left: 0;
@@ -121,10 +122,11 @@ a {
     z-index: 1000;
     box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    transform:translateX(-100%);
+    transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
 }
-.sideBar.active{
+
+.sideBar.active {
     transform: translateX(0);
 }
 
@@ -161,13 +163,13 @@ a {
 
 }
 
-.sidebarBlocktwo {
+.sideBarBlocktwo {
     display: flex;
     justify-content: start;
     align-items: center;
 }
 
-.sidebarBoxtwo {
+.sideBarBoxtwo {
     width: 100%;
     height: auto;
 }
@@ -201,7 +203,7 @@ a {
 
 .nav-link.active {
     background: rgba(255, 255, 255, 0.2);
-    color:var(--lightColor);
+    color: var(--lightColor);
 }
 
 .nav-icon {
@@ -215,7 +217,7 @@ a {
     margin: 20px 30px;
 }
 
-.sidebar-footer {
+.sideBar-footer {
     position: absolute;
     bottom: 30px;
     left: 0;
@@ -281,7 +283,7 @@ a {
 }
 
 .header p {
-    color:var(--secondaryColor);
+    color: var(--secondaryColor);
     font-size: 16px;
 }
 
@@ -302,7 +304,7 @@ a {
 
 .search-bar:focus {
     outline: none;
-    border-color:var(--bgColor);
+    border-color: var(--bgColor);
     box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
@@ -323,11 +325,11 @@ a {
     transition: all 0.3s ease;
     font-size: 14px;
     font-weight: 500;
-    color:var(--secondaryColor);
+    color: var(--secondaryColor);
 }
 
 .filter-btn:hover {
-    border-color:var(--bgColor);
+    border-color: var(--bgColor);
     color: var(--bgColor);
 }
 
@@ -392,7 +394,7 @@ a {
 }
 
 .overlay h3 {
-    color:var(--lightColor);
+    color: var(--lightColor);
     font-size: 18px;
     margin-bottom: 5px;
 }
@@ -402,44 +404,105 @@ a {
     font-size: 14px;
 }
 
-/* Responsive */
-@media (max-width: 1200px) {
-    .gallery {
-        column-count: 2;
-    }
-}
 
-@media (max-width: 768px) {
+
+/* ::::: RESPONSIVE DESIGN DEVICE SIZES ::::: */
+
+/* for Responsive Target the ROW Code (display:grid) */
+
+/* Small devices (landscape phones, upto 576px and below) */
+/* @media (width <=576px) */
+@media (max-width: 576px) {
+
+    .grid-1,
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+        padding: 0rem 1rem;
+    }
+
     .sideBar {
-        width: 80px;
+        transform: translateX(-100%);
+    }
+.social-links{
+  /* display: none; */
+
+}
+.nav-link{
+    padding: 7px 15px;
+}
+    .sideBar.active {
+        transform: translateX(0);
     }
 
-    .sideBarBoxone h1,
-    .sideBarBoxone p,
-    .nav-link span,
-    .sidebar-footer {
-        display: none;
+    .menu-btn {
+        display: flex;
     }
 
-    .nav-link {
-        justify-content: center;
-    }
-
-    .nav-icon {
-        margin-right: 0;
-    }
 
     .main-content {
-        margin-left: 80px;
-        padding: 20px;
+        margin-left: 38px;
+        padding: 6rem 4rem 1rem;
     }
 
     .gallery {
-        column-count: 1;
-        margin-left: 75px;
+        margin-left: 38px;
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
-    .header h2 {
-        font-size: 28px;
+
+}
+
+/* Medium devices (tablets, upto 768px and above) */
+/* @media (width >=577px) and (width <=768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+    /* write code here */
+}
+
+/* Large devices (Laptops, upto 992px and above) */
+/* @media (width >=769px) and (width <=992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+
+    /* write code here */
+    .sideBar {
+        transform: translateX(-100%);
     }
+
+    .sideBar.active {
+        transform: translateX(0);
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .nav-link{
+        padding: 7px 15px;
+    }
+    .main-content {
+        margin-left: 38px;
+        padding: 6rem 4rem 1rem;
+    }
+
+    .gallery {
+        margin-left: 40px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+
+}
+
+/* X-Large devices (large desktops, upto 1200px and above) */
+/* @media (width >=993px) and (width <=1200px) */
+@media (min-width: 993px) and (max-width: 1200px) {
+    /* write code here */
+}
+
+/* XX-Large devices (larger desktops, upto 1400px and above) */
+/* @media (width >=1200px) */
+@media (min-width: 1201px) {
+    /* write code here */
 }
