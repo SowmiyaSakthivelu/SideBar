@@ -110,6 +110,23 @@ a {
 .menu-btn:hover {
     background: var(--primaryColor);
 }
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.9rem;
+    cursor: pointer;
+    color: var(--lightColor);
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.close-btn:hover {
+    background: var(--primaryColor);
+}
 
 .sideBar {
     position: fixed;
@@ -118,7 +135,7 @@ a {
     width: 260px;
     height: 100vh;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 30px 0;
+    padding: 20px 0;
     z-index: 1000;
     box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -180,7 +197,7 @@ a {
 }
 
 .nav-item {
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
 }
 
 .nav-link {
@@ -219,7 +236,7 @@ a {
 
 .sideBar-footer {
     position: absolute;
-    bottom: 30px;
+    bottom: 15px;
     left: 0;
     right: 0;
     padding: 0 30px;

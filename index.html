@@ -34,6 +34,7 @@
 
                     <div class="sideBarBlockone">
                         <div class="sideBarBoxone">
+                            <button class="close-btn" id="closeBtn">✕</button>
                             <h1><i class="fa-solid fa-camera"></i> Wild Lens</h1>
                             <p>Photography</p>
                         </div>
@@ -347,7 +348,11 @@
         menuBtn.addEventListener('click', function () {
             sidebar.classList.toggle('active');
         });
-
+        // Close sidebar with close button
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        });
         // Optional: Close sidebar when clicking outside
         document.addEventListener('click', function (e) {
             if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
